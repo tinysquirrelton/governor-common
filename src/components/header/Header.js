@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Logo from "../assets/logos/governor-plain.png";
+import Logo from "../../assets/logos/governor-plain.png";
 import { Menu, X, ChevronDown, ChevronUp } from "react-feather";
 import { statistics, applications, resources, social } from "./items";
 import "./style.scss";

@@ -1,14 +1,11 @@
 import React, { Component } from "react";
-import Header from "./header/Header";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {}
 
   render() {
-    return <Header />;
+    return null;
   }
 }
