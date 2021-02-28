@@ -1,0 +1,19 @@
+@import "styles/breakpoints.scss";
+@import "assets/fonts/fonts.scss";
+
+body {
+  font-family: "OpenSans" !important;
+}
+
+:focus {
+  outline: none !important;
+}
+
+.max-width-container {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  @include rwd(1440) {
+    max-width: 1440px;
+  }
+}
