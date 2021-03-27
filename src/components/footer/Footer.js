@@ -17,7 +17,6 @@ class Footer extends Component {
                 <a href="https://stake.governordao.org/">Stake</a>
                 <a href="https://mine.governordao.org/">Liquidity Mine</a>
                 <a href="https://swap.governordao.org/">Swap</a>
-                <a href="https://airdrop.governordao.org/">Airdrop</a>
               </div>
               <div className="item">
                 <div className="header">Social</div>

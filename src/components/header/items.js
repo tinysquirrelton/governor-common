@@ -7,7 +7,6 @@ export const applications = [
   { to: "https://stake.governordao.org/", title: "Stake" },
   { to: "https://mine.governordao.org/", title: "Liquidity Mine" },
   { to: "https://swap.governordao.org/", title: "Swap" },
-  { to: "https://airdrop.governordao.org/", title: "Airdrop" },
 ];
 
 export const resources = [
