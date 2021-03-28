@@ -12,7 +12,8 @@ export const resources = [
   { to: "https://governordao.org/media", title: "Media" },
   { to: "https://gdao.network/", title: "Forum" },
   { to: "/", title: "Litepaper" },
-  { to: "https://governor.social/", title: "Archive" },
+  { to: "https://governordao.org/contracts", title: "Contracts" },
+  { to: "https://governordao.org/team", title: "Team" },
 ];
 
 export const social = [
