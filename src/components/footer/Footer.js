@@ -40,7 +40,7 @@ class Footer extends Component {
                   Litepaper
                 </a>
                 <a href="https://governordao.org/contracts">Contracts</a>
-                <a href="https://governordao.org/Team">Team</a>
+                <a href="https://governordao.org/team">Team</a>
               </div>
               <div className="item">
                 <img
