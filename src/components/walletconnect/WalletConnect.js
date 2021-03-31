@@ -2,12 +2,18 @@ import { toast } from "react-toastify";
 import Web3 from "web3";
 import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/web3-provider";
+import {
+  testnet,
+  infuraProvider,
+  chainId,
+} from "../../utilities/constants/constants";
+
 
 const providerOptions = {
   walletconnect: {
     package: WalletConnectProvider, // required
     options: {
-      infuraId: "e35323bc24d243c6a971cefcaaa55953", // required
+      infuraId: testnet ? '665449e765ef407b9031c69c9e6a02f0' : "e35323bc24d243c6a971cefcaaa55953", // required
     },
   },
 };
@@ -22,8 +28,8 @@ export default class WalletConnect {
     this.account = "";
     this.web3 = null;
     this.provider = null;
-    this.chainId = 1;
-    this.networkId = 1;
+    this.chainId = chainId;
+    this.networkId = chainId;
     // Modal
     this.web3Modal = new Web3Modal({
       network: "mainnet", // optional
@@ -67,11 +73,11 @@ export default class WalletConnect {
       this.chainId = await this.web3.eth.chainId();
       this.isConnected = true;
 
-      if (this.chainId === 1) {
+      if (this.chainId === (testnet ? 3 : 1)) {
         this.onConnect(this.web3);
       } else {
         this.account = null;
-        toast.error("You need to be on the Ethereum Mainnet");
+        toast.error(testnet ? 'You need to be on Ropsten Testnet' : "You need to be on the Ethereum Mainnet");
       }
     } catch (e) {
       console.log(e);
@@ -114,8 +120,8 @@ export default class WalletConnect {
     this.account = "";
     this.web3 = null;
     this.provider = null;
-    this.chainId = 1;
-    this.networkId = 1;
+    this.chainId = chainId;
+    this.networkId = chainId;
     await this.onResetConnect();
   };
 }
